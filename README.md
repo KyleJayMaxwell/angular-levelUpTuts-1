@@ -7,12 +7,14 @@ In most classic template systems, they merge both the template and model togethe
   1. Once the template and model both merge, any changes made to the model after will **NOT** go through the the view. 
   2. Anything that the user changes will not effect the view either. Making more work for the developer, who has to write code that syncs the view with the model and vice versa.
 Visual example of the classic data binding system.
+
 One Way Binding:
 ![picture of one way data binding](https://docs.angularjs.org/img/One_Way_Data_Binding.png "Classic Data Binding Diagram")
 
 ##### Angular Template
 In angular things work a bit differently. The template is made of uncompiled HTML, markups and directives, which is then compiled in the browser. The compilation step then makes a live view, this especially means that any changes in either the view or model will mirror each other. In essence the view is now what the **SUDO** or **Single-Source-Of-Truth**, basically meaning that the view is now a instant reflection of your model. While the view is just a mirror of the model the controller is separate from the view and won't register it. The reason for this is because of testing, we can now test the controller without the view or any browser dependencies/DOM.
 Visual example of the Angular data binding system.
+
 Angular Two Way Binding:
 ![picture of two way data binding](https://docs.angularjs.org/img/Two_Way_Data_Binding.png "Angular Binding Diagram")
 
