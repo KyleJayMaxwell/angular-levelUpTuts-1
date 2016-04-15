@@ -1,9 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
 <head>
   <title>Two-Way Data Bindings</title>
+  <!-- angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
 </head>
-<body>
+<!-- activley changing background color by text input box -->
+<body style="background:{{yourName}}">
+
+  <!-- input with angular directive (ie. ng-model) -->
+  <input type="text" ng-model="yourName" placeholder="Enter Your Name Here.">
+  <!-- built in angular variable for the directive, can be used more than one place -->
+  <h2>{{yourName}}</h2>
 
 </body>
 </html>
